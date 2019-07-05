@@ -17,7 +17,7 @@ class CrearTablaUsuarioRol extends Migration
             $table->Increments('id');
             $table->unsignedInteger('rol_id');
             $table->foreign('rol_id','fk_usuariorol_rol' )->references('id')->on('rol')->onDelete('restrict')->onUpdate('restrict');
-            $table->unsignedInteger('rol_id');
+            $table->unsignedInteger('usuario_id');
             $table->foreign('rol_id','fk_usuariorol_usuario' )->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
             
             $table->boolean('estado');
